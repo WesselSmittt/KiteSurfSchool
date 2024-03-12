@@ -12,6 +12,10 @@ class HomeController extends Controller
     {
         if (Auth::id()) {
             $usertype = Auth()->user()->usertype;
+
+            if ($usertype == 'user') {
+                return view('dashboard');
+            }
         }
     }
 }
