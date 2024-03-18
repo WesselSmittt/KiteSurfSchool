@@ -16,13 +16,12 @@ export default {
             },
             height: {
                 '670': '670px',
-              }
+            }
         },
     },
 
-    
-
-    plugins: [forms],
-
-    
+    plugins: [
+        forms,
+        require('flowbite/plugin')
+    ],
 };

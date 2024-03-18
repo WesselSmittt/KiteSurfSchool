@@ -1,11 +1,13 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    const button = document.querySelector('.hamburger-button');
-    const dropdown = document.querySelector('.dropdown-content');
+document.addEventListener('DOMContentLoaded', function () {
 
-    // Hide the dropdown menu initially
-    dropdown.style.display = 'none';
+    console.log('nav.js loaded');
 
-    button.addEventListener('click', () => {
-        dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-    });
+    const dropdownToggle = document.querySelector('[data-dropdown-toggle]');
+    const dropdown = document.getElementById('dropdown');
+
+    if (dropdownToggle && dropdown) {
+        dropdownToggle.addEventListener('click', function () {
+            dropdown.classList.toggle('open');
+        });
+    }
 });

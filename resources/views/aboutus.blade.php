@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     @vite('resources/css/app.css')
-    <script src="{{ asset('js/custom.js') }}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
-
-
     <div class="bg-cover bg-center h-96 w-full" style="background-image: url('img/Aboutus-header.png');">
         <nav class="p-6 flex justify-between items-center">
             <div>
@@ -21,28 +19,44 @@
             <div class="text-2xl font-bold text-gray-800">
                 KITESURF
             </div>
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-                </svg>
-            </button>
+            <div class="relative">
 
-            <!-- Dropdown menu -->
-            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                    </li>
-                </ul>
-            </div>
+                <button class="text-white text-sm px-4 py-2.5 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">
+                    <p class="">menu</p>
+                    <div class="flex flex-col ml-2">
+                        <div class="w-5 h-0.5 bg-black"></div>
+                        <div class="w-5 h-0.5 bg-black my-1"></div>
+                        <div class="w-5 h-0.5 bg-black"></div>
+                    </div>
+                </button>
+
+                <div class="dropdown bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow fixed inset-0 w-screen h-screen transform scale-0 transition-transform duration-300 ease-out" id="dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm">Bonnie Green</span>
+                        <span class="block text-sm font-medium text-gray-900 truncate">name@flowbite.com</span>
+                    </div>
+                    <ul class="py-1" aria-labelledby="dropdown">
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+                <script src="{{ asset('js/nav.js') }}"></script>
+
+
+
 </body>
 
 </html>
