@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,4 +33,4 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
